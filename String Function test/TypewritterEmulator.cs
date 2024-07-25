@@ -335,9 +335,7 @@ namespace String_Function_test
                 }
             }
         }
-        //TODO: if this is NOT corrected. this will NOT print a single line. rather will print at least 2. a second buffer to retain the excess from a line might be needed. 
-        //not done due we are simulating the original code we based this one uppon
-        // I am at this point tired of making more fixes to this code. hence put a pin here and future me correct this thing... 
+        //TODO: this will NOT print a single line. rather will print at least 2. a second buffer to retain the excess from a line might be needed.
         ProcessLine(Builder);
         //IF we Corrected the above. we need to refil the Buffer with the pending data. do that instead of Clear OR refill? not sure... 
         Builder.Clear();
@@ -347,9 +345,9 @@ namespace String_Function_test
     /*
     * a problem here: 
     * 
-    * String Builder Lacks a function that I PERSONALLY think it should have:
+    * String Builder Lacks a function
     * 
-    *          oversight from C# folks.Replace function should have a  Replace(Startindex, EndIndex, String Remplacement,Count)  or even more options.
+    *         Replace function should have a  Replace(Startindex, EndIndex, String Remplacement,Count)  or even more options.
                 //hence to replace chunks not single characters. or single instances of specific strings. 
                 // see this scenario for example. we need to replace a start index. up to the size of the new string. 
                 // hence we need to call remove ourselves then insert the string. there is not remplacement option.... 
